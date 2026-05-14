@@ -54,7 +54,7 @@
 2. 以下のコマンドを入力して Enter
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vibecoding-tutorial.git
+git clone https://github.com/hakuga77/vibecoding-tutorial.git
 ```
 
 3. `vibecoding-tutorial` フォルダが作成されれば成功
