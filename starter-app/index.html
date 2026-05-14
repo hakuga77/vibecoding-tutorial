@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>出張プランナー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>出張プランナー</h1>
+
+  <!-- 入力フォーム -->
+  <!-- 💡 Codex へのヒント: ここにもっと入力項目を追加してみよう -->
+  <div class="form-section">
+    <label for="destination">行き先</label>
+    <input type="text" id="destination" placeholder="例：大阪">
+
+    <label for="depart-date">出発日</label>
+    <input type="date" id="depart-date">
+
+    <label for="return-date">帰着日</label>
+    <input type="date" id="return-date">
+
+    <label for="purpose">目的</label>
+    <input type="text" id="purpose" placeholder="例：顧客訪問・展示会参加">
+
+    <button onclick="createPlan()">プランを作成</button>
+  </div>
+
+  <!-- 結果エリア -->
+  <!-- 💡 Codex へのヒント: 旅程のサマリーや泊数計算をここに追加してみよう -->
+  <div class="result-section" id="result" style="display:none;">
+    <h2 id="result-title">出張の概要</h2>
+    <p id="result-summary"></p>
+
+    <!-- 持ち物チェックリスト -->
+    <!-- 💡 Codex へのヒント: チェックリストをカテゴリ別に整理してみよう -->
+    <h3>持ち物チェックリスト</h3>
+    <ul class="checklist">
+      <li><input type="checkbox"> 名刺</li>
+      <li><input type="checkbox"> 財布・現金</li>
+      <li><input type="checkbox"> 交通系ICカード</li>
+      <li><input type="checkbox"> スマートフォン・充電器</li>
+      <li><input type="checkbox"> ノートパソコン・充電器</li>
+      <li><input type="checkbox"> 会社のIDカード</li>
+      <li><input type="checkbox"> 着替え</li>
+      <li><input type="checkbox"> 常備薬・洗面用具</li>
+    </ul>
+
+    <!-- メモ欄 -->
+    <!-- 💡 Codex へのヒント: メモを保存できる機能や予算計算を追加してみよう -->
+    <h3>メモ</h3>
+    <textarea placeholder="自由にメモを書いてください"></textarea>
+  </div>
+
+</body>
+<script>
+  function createPlan() {
+    const destination = document.getElementById('destination').value;
+    const departDate = document.getElementById('depart-date').value;
+    const returnDate = document.getElementById('return-date').value;
+    const purpose = document.getElementById('purpose').value;
+
+    if (!destination || !departDate || !returnDate) {
+      alert('行き先・出発日・帰着日を入力してください');
+      return;
+    }
+
+    const summary = `${destination}への出張（${departDate} 〜 ${returnDate}）\n目的：${purpose || '未設定'}`;
+
+    document.getElementById('result-title').textContent = `${destination} 出張プラン`;
+    document.getElementById('result-summary').textContent = summary;
+    document.getElementById('result').style.display = 'block';
+  }
+</script>
+</html>

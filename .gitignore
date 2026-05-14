@@ -1,0 +1,14 @@
+# ローカル作業設定（GitHub には上げない）
+.claude/
+.gemini/
+.twinbox/
+CLAUDE.md
+GEMINI.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ログ・一時ファイル
+*.log
+*.tmp

@@ -1,0 +1,72 @@
+/* 基本スタイル */
+/* 💡 Codex へのヒント: ここのデザインを自由に変えてみよう！ */
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/* フォーム */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 結果エリア */
+.result-section {
+  border-top: 2px solid #333;
+  padding-top: 20px;
+}
+
+/* チェックリスト */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* メモ欄 */
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
